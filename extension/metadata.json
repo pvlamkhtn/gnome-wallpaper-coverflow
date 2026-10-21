@@ -1,0 +1,15 @@
+{
+  "uuid": "wallpaper-coverflow@pvlamkhtn.github.io",
+  "name": "Wallpaper Coverflow",
+  "description": "Omarchy-style wallpaper picker: a full-screen carousel of slanted cards from your wallpaper folder. Hover or use the arrow keys to browse, click or press Enter to apply, Esc to cancel. Open it with Ctrl+Super+W (configurable); an optional shortcut cycles to the next wallpaper.",
+  "shell-version": [
+    "46",
+    "47",
+    "48",
+    "49",
+    "50",
+    "51"
+  ],
+  "settings-schema": "org.gnome.shell.extensions.wallpaper-coverflow",
+  "url": "https://github.com/pvlamkhtn/gnome-wallpaper-coverflow"
+}

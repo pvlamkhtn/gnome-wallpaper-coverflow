@@ -1,0 +1,15 @@
+.wallpaper-coverflow-overlay {
+  background-color: #000;
+}
+
+.wallpaper-coverflow-dim {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+
+.wallpaper-coverflow-shade {
+  background-color: #000;
+}
+
+.wallpaper-coverflow-window {
+  background-color: rgba(255, 255, 255, 0.08);
+}

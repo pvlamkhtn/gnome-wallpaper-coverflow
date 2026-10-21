@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.wallpaper-coverflow"
+          path="/org/gnome/shell/extensions/wallpaper-coverflow/">
+    <key name="wallpaper-directory" type="s">
+      <default>''</default>
+      <summary>Wallpaper folder</summary>
+      <description>Folder whose images are shown in the picker. When empty, ~/Pictures/Wallpapers (the localized Pictures folder) is used.</description>
+    </key>
+    <key name="show-picker" type="as">
+      <default><![CDATA[['<Control><Super>w']]]></default>
+      <summary>Open the wallpaper picker</summary>
+      <description>Keyboard shortcut that opens (or closes) the full-screen wallpaper picker.</description>
+    </key>
+    <key name="next-wallpaper" type="as">
+      <default>[]</default>
+      <summary>Switch to the next wallpaper</summary>
+      <description>Optional keyboard shortcut that applies the next image in the wallpaper folder, wrapping around.</description>
+    </key>
+    <key name="accent-color" type="s">
+      <default>'#5AD1E6'</default>
+      <summary>Highlight color</summary>
+      <description>Border color of the focused wallpaper in the picker, as #RRGGBB.</description>
+    </key>
+  </schema>
+</schemalist>

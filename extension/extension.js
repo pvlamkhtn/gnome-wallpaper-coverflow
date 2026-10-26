@@ -36,6 +36,7 @@ export default class WallpaperCoverflowExtension extends Extension {
 
         this._cancellable.cancel();
         this._cancellable = null;
+        this._picker?.disconnectObject(this);
         this._picker?.destroy();
         this._picker = null;
         this._settings = null;
@@ -86,11 +87,12 @@ export default class WallpaperCoverflowExtension extends Extension {
                 Main.notifyError(this.metadata.name, this.gettext('None of the images could be read'));
                 return;
             }
-            picker.connect('selected', (_picker, path) => applyWallpaper(path));
-            picker.connect('closed', () => {
-                if (this._picker === picker)
-                    this._picker = null;
-            });
+            picker.connectObject(
+                'selected', (_picker, path) => applyWallpaper(path),
+                'closed', () => {
+                    if (this._picker === picker)
+                        this._picker = null;
+                }, this);
             this._picker = picker;
             if (!picker.open())
                 this._picker = null;
